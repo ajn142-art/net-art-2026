@@ -1,0 +1,55 @@
+/* Normalize page */
+* {
+  margin: 0;
+}
+
+/* Full-screen container with 5x5 grid */
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5px; /* spacing between boxes */
+}
+
+/* Base box style */
+.box {
+  border: 2px solid white;
+  border-radius: 15px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth hover animation */
+}
+
+/* Hover effect */
+.box:hover {
+  opacity: 0.7;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Gradient colors for boxes */
+.red {
+  background: linear-gradient(45deg, #e63946, #ff9f1c);
+}
+
+.blue {
+  background: linear-gradient(45deg, #457b9d, #1d3557);
+}
+
+.yellow {
+  background: linear-gradient(45deg, #f4a261, #e9c46a);
+}
+
+.green {
+  background: linear-gradient(45deg, #2a9d8f, #52b788);
+}
+
+.purple {
+  background: linear-gradient(45deg, #6a4c93, #9d4edd);
+}
+
+/* Big blocks span 2 rows and 2 columns */
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
