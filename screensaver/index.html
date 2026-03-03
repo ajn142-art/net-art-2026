@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cosmic Drift Screensaver</title>
+
+<style>
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+.message {
+    font-size: 2rem;
+    opacity: 0.7;
+    transition: opacity 0.8s ease;
+}
+
+body:hover .message {
+    opacity: 0;
+}
+
+.circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, white, cyan, blue);
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body:hover .circle {
+    opacity: 0.8;
+    animation: drift 10s linear infinite;
+}
+
+.circle:nth-of-type(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 12s;
+}
+
+.circle:nth-of-type(2) {
+    top: 50%;
+    left: 70%;
+    animation-duration: 8s;
+}
+
+.circle:nth-of-type(3) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 14s;
+}
+
+.circle:nth-of-type(4) {
+    top: 30%;
+    left: 80%;
+    animation-duration: 9s;
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+        transform: translate(200px, -150px) rotate(180deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(360deg);
+    }
+}
+
+body:active .circle {
+    animation-duration: 3s;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="message">Hover to activate screensaver mode</div>
+</div>
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+</body>
+</html>
